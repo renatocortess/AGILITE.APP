@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AGILITE.APP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+}
+    /* Estilos dos modais */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #e2e2e2;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    /* Estilos para iPhone */
+    @media only screen and (max-width: 375px) {
+      .modal-content {
+        margin: 30% auto;
+      }
+    }
+
+    /* Estilos para o container card */
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background-color: green;
+      color: white;
+      font-size: 20PX;
+    }
+
+    .card button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <a href="./dashboard.html" class="button">  <span class="material-symbols-outlined">
+        arrow_back
+        </span></a>
+  <div class="card">
+    <h3>Café da manhã</h3>
+    <button onclick="openModal('modal1')">Abrir </button>
+  </div>
+
+  <div class="card">
+    <h3>Almoço</h3>
+    <button onclick="openModal('modal2')">Abrir </button>
+  </div>
+
+  <div class="card">
+    <h3>Jantar</h3>
+    <button onclick="openModal('modal3')">Abrir </button>
+  </div>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h2>Refeição 1 - Café da manhã:</h2>
+      <ul>
+        <li>Opção 1: Omelete de claras de ovo com vegetais picados (espinafre, tomate, cebola) e uma fatia de pão integral.)</li>
+        <br>
+        <li>Opção 2: Mingau de aveia com leite desnatado, frutas frescas picadas (banana, morangos) e uma colher de chá de mel.</li>
+        <br>
+        <li>Opção 3: Iogurte natural desnatado com granola, nozes e frutas vermelhas.</li>
+        <br>
+
+        <br>
+       
+        <br>
+       
+        <br>
+      
+      </ul>
+      <button onclick="closeModal('modal1')">Fechar</button>
+    </div>
+   
+  </div>
+  <div class="card">
+    <h3>Instruções</h3>
+    <h4>Rubens Nutricionista</h4>
+    <p>Dicas para aumentar seus resultados!</p>
+    <p><strong>Instruções para o café da manhã:</strong></p>
+    <ul>
+      <li>Escolha uma das opções acima ou varie entre elas para diversificar sua alimentação.</li>
+      <br>
+      <li>Priorize alimentos ricos em proteínas magras, como ovos, leite desnatado e iogurte, para fornecer energia sustentada ao longo do dia.</li>
+      <br>
+      <li>Inclua uma porção de carboidratos complexos, como pão integral ou aveia, para promover a saciedade e fornecer energia.</li>
+    </ul>
+    <p><strong>Instruções para o jantar:</strong></p>
+    <ul>
+      <li>Escolha uma das opções acima ou varie entre elas para manter a variedade nutricional.</li>
+      <br>
+      <li>Priorize fontes magras de proteínas, como frango, peixe ou ovos.</li>
+      <br>
+      <li>Inclua uma porção de carboidratos complexos, como quinoa, batata-doce ou salada verde, para fornecer energia.</li>
+    </ul>
+    <p><strong>Instruções para o almoço:</strong></p>
+    <ul>
+      <li>Escolha uma das opções acima ou varie entre elas para manter a diversidade nutricional.</li>
+      <br>
+      <li>Priorize fontes magras de proteínas, como peixe, frango ou atum.</li>
+      <br>
+      
+      <li>Inclua vegetais cozidos no vapor ou saladas para obter fibras, vitaminas e minerais.</li>
+    </ul>
+  </div>
+  <p></p>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h2>Refeição 2 - Almoço:</h2>
+      <ul>
+        <li>Opção 1: Peito de frango grelhado com legumes no vapor (brócolis, cenoura, couve-flor) e quinoa.</li>
+        <br>
+        <li>Opção 2: Filé de salmão assado com batata-doce cozida e salada verde (alface, rúcula, tomate).</li>
+        <br>
+        <li>Opção 3: Omelete de claras de ovo com cogumelos, espinafre e uma salada de folhas verdes.</li>
+        <br>
+     
+        <br>
+       
+        <br>
+       
+        <br>
+        
+      </ul>
+      <button onclick="closeModal('modal2')">Fechar</button>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h2>Refeição 3 - Jantar:</h2>
+      <ul>
+        <li>Opção 1: Peixe grelhado com brócolis e couve-flor no vapor e uma porção pequena de arroz integral.</li>
+        <br>
+        <li>Opção 2: Sopa de legumes com frango desfiado e uma fatia de pão integral.</li>
+        <br>
+        <li>Opção 3: Salada de atum com mix de folhas, tomate, pepino e abacate.</li>
+        <br>
+        
+        <br>
+     
+        <br>
+        
+        <br>
+      </ul>
+      <button onclick="closeModal('modal3')">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+  </script>
+</body>
+</html>

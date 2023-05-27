@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AGILITE.APP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+}
+    /* Estilos dos modais */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #e2e2e2;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    /* Estilos para iPhone */
+    @media only screen and (max-width: 375px) {
+      .modal-content {
+        margin: 30% auto;
+      }
+    }
+
+    /* Estilos para o container card */
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background-color: green;
+      color: white;
+      font-size: 20PX;
+    }
+
+    .card button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <a href="./dashboard.html" class="button">  <span class="material-symbols-outlined">
+        arrow_back
+        </span></a>
+  <div class="card">
+    <h3>Treino A</h3>
+    <button onclick="openModal('modal1')">Abrir Treino A</button>
+  </div>
+
+  <div class="card">
+    <h3>Treino B</h3>
+    <button onclick="openModal('modal2')">Abrir Treino B</button>
+  </div>
+
+  <div class="card">
+    <h3>Treino C</h3>
+    <button onclick="openModal('modal3')">Abrir Treino C</button>
+  </div>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h2>Treino A - Peito, Ombros e Tríceps:</h2>
+      <ul>
+        <li>Supino reto (3 séries de 10 repetições)</li>
+        <br>
+        <li>Desenvolvimento de ombros com halteres (3 séries de 10 repetições)</li>
+        <br>
+        <li>Crucifixo inclinado (3 séries de 12 repetições)</li>
+        <br>
+        <li>Elevação lateral (3 séries de 12 repetições)</li>
+        <br>
+        <li>Tríceps pulley (3 séries de 10 repetições)</li>
+        <br>
+        <li>Extensão de tríceps com halteres (3 séries de 12 repetições)</li>
+        <br>
+      
+      </ul>
+      <button onclick="closeModal('modal1')">Fechar</button>
+    </div>
+   
+  </div>
+  <div class="card">
+    <h3>Como seguir o treino:</h3>
+    <h4>by Personal Lucas Braga</h4>
+    <p>Realize cada treino em dias alternados, por exemplo:</p>
+    <p><strong>Semana 1:</strong></p>
+    <ul>
+      <li>Segunda-feira: Treino A</li>
+      <li>Quarta-feira: Treino B</li>
+      <li>Sexta-feira: Treino C</li>
+    </ul>
+    <p><strong>Semana 2:</strong></p>
+    <ul>
+      <li>Segunda-feira: Treino A</li>
+      <li>Quarta-feira: Treino B</li>
+      <li>Sexta-feira: Treino C</li>
+    </ul>
+    <p>Você pode realizar um aquecimento de 5 a 10 minutos antes de cada treino, incluindo exercícios de mobilidade e alongamento. Certifique-se de usar uma carga adequada para cada exercício, que permita completar as repetições com boa técnica, mas ainda assim seja desafiadora.</p>
+    <p>Lembre-se de descansar de 1 a 2 minutos entre as séries e de se hidratar durante todo o treino. Além disso, escute o seu corpo e faça ajustes conforme necessário. Com o tempo, você pode aumentar gradualmente a intensidade, adicionando mais peso, repetições ou séries aos exercícios.</p>
+    <p>É importante lembrar que a alimentação adequada e o descanso também desempenham um papel fundamental no seu progresso na academia. Consulte um nutricionista para obter orientações sobre uma dieta balanceada e saudável.</p>
+    <p>Bons treinos e aproveite o seu caminho para uma vida mais ativa e saudável!</p>
+  </div>
+  <p></p>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h2>Treino B - Costas e Bíceps:</h2>
+      <ul>
+        <li>Remada baixa (3 séries de 10 repetições)</li>
+        <br>
+        <li>Barra fixa (3 séries de 8 repetições)</li>
+        <br>
+        <li>Puxada frontal (3 séries de 12 repetições)</li>
+        <br>
+        <li>Rosca direta (3 séries de 10 repetições)</li>
+        <br>
+        <li>Rosca martelo (3 séries de 12 repetições)</li>
+        <br>
+        <li>Rosca Scott (3 séries de 10 repetições)</li>
+        <br>
+        
+      </ul>
+      <button onclick="closeModal('modal2')">Fechar</button>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h2>Treino C - Pernas e Abdômen:</h2>
+      <ul>
+        <li>Agachamento livre (3 séries de 10 repetições))</li>
+        <br>
+        <li>Cadeira extensora (3 séries de 12 repetições)</li>
+        <br>
+        <li>Flexão de pernas (3 séries de 12 repetições)</li>
+        <br>
+        <li>Panturrilha no leg press (3 séries de 15 repetições)</li>
+        <br>
+        <li>Prancha abdominal (3 séries de 30 segundos)</li>
+        <br>
+        <li>Abdominal crunch (3 séries de 15 repetições)</li>
+        <br>
+      </ul>
+      <button onclick="closeModal('modal3')">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+  </script>
+</body>
+</html>

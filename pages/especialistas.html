@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Chats com Profissionais de Saúde</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      flex: 1;
+      background-color: #ddd;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background-color: #f9f9f9;
+    }
+
+    .chat-container {
+      display: none;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .chat-container.active {
+      display: block;
+    }
+
+    .chat-message {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      display: flex;
+      align-items: center;
+    }
+
+    .chat-message.sender {
+      background-color: #e1f5fe;
+      text-align: right;
+    }
+
+    .chat-message .icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      border-radius: 50%;
+    }
+
+    .chat-message .sender .icon {
+      background-color: #4CAF50;
+    }
+
+    .chat-message .receiver .icon {
+      background-color: #FF5722;
+    }
+
+    .chat-input {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .chat-input input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .chat-input button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #4CAF50;
+      color: #fff;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .message-time {
+      font-size: 12px;
+      color: #888;
+      margin-left: 10px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      body {
+        padding: 10px;
+      }
+
+      .tabs {
+        flex-wrap: wrap;
+      }
+
+      .tab {
+        flex-basis: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="./dashboard.html" class="button">  <span class="material-symbols-outlined">
+    arrow_back
+    </span></a>
+  <div class="tabs">
+    <div class="tab active" onclick="openChat(1)">Rubens Nutricionista</div>
+    <div class="tab" onclick="openChat(2)">Luan Psicológo</div>
+    <div class="tab" onclick="openChat(3)">Lucas Personal</div>
+    <div class="tab" onclick="openChat(4)">Ana Fisio</div>
+  </div>
+
+  <div class="chat-container active" id="chat1">
+    <div class="chat-message receiver">
+      <div class="icon"></div>
+      <span class="message-content">Olá, João. Fico feliz em ajudá-lo. Vamos começar falando sobre sua rotina alimentar atual. O que você costuma comer durante a manhã?</span>
+      <span class="message-time">11:30 AM</span>
+    </div>
+    <div class="chat-message sender">
+      <div class="icon"></div>
+      <span class="message-content">Eu tenho dificuldade em controlar meu consumo de doces. Existe alguma alternativa mais saudável que eu possa adotar?</span>
+      <span class="message-time">11:32 AM</span>
+    </div>
+    <div class="chat-message receiver">
+      <div class="icon"></div>
+      <span class="message-content">Com certeza! Uma opção mais saudável seria trocar os doces por frutas frescas. Elas são doces naturalmente e também fornecem nutrientes importantes para o seu corpo.</span>
+      <span class="message-time">11:35 AM</span>
+    </div>
+  </div>
+
+  <div class="chat-container" id="chat2">
+    <div class="chat-message receiver">
+      <div class="icon"></div>
+      <span class="message-content">Olá, João. Fico feliz em ajudar. Qual é a sua dúvida?</span>
+      <span class="message-time">12:05 PM</span>
+    </div>
+    <div class="chat-message sender">
+      <div class="icon"></div>
+      <span class="message-content">Eu tenho dificuldade em controlar meu consumo de doces. Existe alguma alternativa mais saudável que eu possa adotar?</span>
+      <span class="message-time">12:10 PM</span>
+    </div>
+    <div class="chat-message receiver">
+      <div class="icon"></div>
+      <span class="message-content">Com certeza! Uma opção mais saudável seria trocar os doces por frutas frescas. Elas são doces naturalmente e também fornecem nutrientes importantes para o seu corpo.</span>
+      <span class="message-time">12:15 PM</span>
+    </div>
+  </div>
+
+  <div class="chat-container" id="chat3">
+    <div class="chat-message receiver">
+      <div class="icon"></div>
+      <span class="message-content">Olá, João! É um prazer ajudá-lo. Como posso auxiliar nos seus objetivos?</span>
+      <span class="message-time">2:20 PM</span>
+    </div>
+    <div class="chat-message sender">
+      <div class="icon"></div>
+      <span class="message-content">Gostaria de ganhar massa muscular e melhorar minha resistência. Por onde devo começar?</span>
+      <span class="message-time">2:25 PM</span>
+    </div>
+    <div class="chat-message receiver">
+      <div class="icon"></div>
+      <span class="message-content"> Para alcançar seus objetivos, é importante seguir um programa de treinamento específico. Vamos começar com um treinamento de força para desenvolver seus músculos e, em seguida, adicionar exercícios aeróbicos para trabalhar sua resistência. Podemos agendar uma avaliação física para definir seu ponto de partida.</span>
+      <span class="message-time">2:30 PM</span>
+    </div>
+  </div>
+
+  <div class="chat-container" id="chat4">
+    <div class="chat-message receiver">
+      <div class="icon"></div>
+      <span class="message-content">Olá, João. Sou o Lucas, fisioterapeuta. Fico feliz em poder ajudá-lo. Conte-me mais sobre suas dores nas costas</span>
+      <span class="message-time">3:45 PM</span>
+    </div>
+    <div class="chat-message sender">
+      <div class="icon"></div>
+      <span class="message-content">Sinto dores na região lombar após passar muito tempo sentado e também durante a prática de exercícios. O que você recomenda?</span>
+      <span class="message-time">3:50 PM</span>
+    </div>
+    <div class="chat-message receiver">
+      <div class="icon"></div>
+      <span class="message-content">Com base nas suas queixas, é possível que você esteja enfrentando problemas de postura e falta de fortalecimento muscular. Vamos realizar uma avaliação física para identificar as causas específicas das suas dores e desenvolver um plano de tratamento, que incluirá exercícios de fortalecimento e alongamento.</span>
+      <span class="message-time">3:55 PM</span>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="messageInput" placeholder="Digite uma mensagem">
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+
+  <script>
+    function openChat(chatNumber) {
+      var chatContainers = document.getElementsByClassName("chat-container");
+      for (var i = 0; i < chatContainers.length; i++) {
+        chatContainers[i].classList.remove("active");
+      }
+
+      var tabs = document.getElementsByClassName("tab");
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+      }
+      tabs[chatNumber - 1].classList.add("active");
+
+      document.getElementById("chat" + chatNumber).classList.add("active");
+    }
+
+    function sendMessage() {
+      var activeChat = document.querySelector(".chat-container.active");
+      var messageInput = document.getElementById("messageInput");
+      var messageContent = messageInput.value.trim();
+      if (messageContent !== "") {
+        var messageElement = document.createElement("div");
+        messageElement.classList.add("chat-message", "sender");
+        messageElement.innerHTML = `
+          <div class="icon"></div>
+          <span class="message-content">${messageContent}</span>
+          <span class="message-time">${getCurrentTime()}</span>
+        `;
+        activeChat.appendChild(messageElement);
+        messageInput.value = "";
+        messageInput.focus();
+      }
+    }
+
+    function getCurrentTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      return hours + ":" + minutes;
+    }
+  </script>
+</body>
+</html>

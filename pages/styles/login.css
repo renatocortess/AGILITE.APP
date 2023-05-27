@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+form{
+    
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 60px;
+
+}
+
+h1{
+    background-color: azure;
+}
+
+
+
+
+
+
+
+
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+  }
+  
+  .button:hover {
+    background-color: rgb(3, 3, 175);
+    text-decoration: none;
+    color: white;
+  }

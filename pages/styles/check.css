@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  label {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked + label {
+    background-color: #a0d3ff;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+  }
+  
+  .button:hover {
+    background-color: rgb(3, 3, 175);
+    text-decoration: none;
+    color: white;
+  }
+
+  .img{
+    margin-bottom: 40px;
+  }
+  #buttton{
+    width: 80px;
+  }
+  
+  

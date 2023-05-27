@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+}
+#buttonIndex{
+    border-radius: 30px;
+    border: 1px solid green;
+    text-decoration: none;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    font-size: 25px;
+    align-items: center;
+    width: 250px;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+    
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+#buttonIndex:hover{
+    background-color: rgb(1, 61, 1);
+}
+
+.img{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    margin-top: 40px;
+}

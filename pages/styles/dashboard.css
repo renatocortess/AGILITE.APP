@@ -1,0 +1,174 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+}
+body {
+    background: #b4bcc4;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+img{
+    background-color: rgb(247, 248, 247);
+    width: 200px;
+    border-radius: 20px;
+    padding-bottom: 15px;
+}
+.sub-heading{
+    font-weight: 200;
+    
+}
+.container {
+    width: 360px;
+    height: 850px;
+    background: green;
+    border-radius: 40px;
+    margin-top: 200px;
+    padding-top: -20px;
+    
+}
+
+i.nav-icon {
+    color: #f9fafd;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+div.dot {
+    width: 10px;
+    height: 10px;
+    background: #2eff96;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+}
+
+span.heading {
+    font-size: 2em;
+    color: #fff0ff;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+span.sub-heading {
+    color: #000107;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+div.menu {
+    background: #e6e8eb;
+    color: #000107;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+}
+
+span.active {
+    background-color: #cfd1e2;
+    border-radius: 10px;
+    color: #fff0ff;
+    margin: 4px;
+    text-decoration: none;
+}
+
+span.filter {
+    border-radius: 10px;
+    background: #f3f3f5;
+    color: black;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+}
+
+span.add-filter {
+    background: #f3f3f5;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid #585F8B;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+i.filter-icon {
+    font-size: 10px;
+}
+
+span.filter-active {
+    color: #fff0ff;
+}
+
+span.expense-label {
+    color: #050005;
+    position: relative;
+    z-index: 0;
+}
+
+span.expense-label::before {
+    content: "";
+    position: absolute;
+    background: #dddfe2;
+    width: 64px;
+    height: 9px;
+    top: 38px;
+    left: 4px;
+    z-index: -1;
+}
+
+span.expense {
+    color: #080008;
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-size: 34px;
+}
+
+div.bar-1 {
+    bottom: 0;
+    width: 20px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FF91C2, #FE59FD);
+}
+
+
+div.bar-2 {
+    width: 20px;
+    background: #2a3350;
+    border-radius: 5px;
+}
+
+span.chart-label {
+    font-size: 17px;
+    font-weight: 900;
+    color: #000311;
+    
+}
+
+div.chart-bg {
+    background: #dddfe2;
+    border-radius: 25px;
+}
+
+span a {
+    
+    
+text-decoration: none;
+font-size: 15px;
+color: #000107;
+}
+
+span a:hover {
+    color: #2a3350;
+   
+}
